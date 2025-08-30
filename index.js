@@ -7,34 +7,28 @@ function Findgrade(){
 
      let totalmark = mark1+mark2+mark3+mark4+mark5;
 
-     let avrage = parseInt(totalmark/5);
+     let avrage = Math.round(totalmark/5);
 
-    
-    if(avrage >= 90.00){
+     let grade;
+    if(avrage >= 90){
         grade="A+";
-     }
-    else if(90.00>avrage>80.00){
+     }else if(avrage >= 80){
         grade="A";
-     }
-    else if(80.00>avrage>70.00){
+     } else if(avrage>=70){
         grade="B";
-     }
-    else if(70.00>avrage>60.00){
+     } else if(avrage>=60){
         grade="C";
-     }
-    else if(60.00>avrage>50.00){
+     } else if(avrage>=50){
         grade="D";
-     }
-    else if(50.00>avrage>40.00){
+     } else if(avrage>=40){
         grade="E";
-     }
-    else {
+     } else {
         grade="F";
      }
 
     alert("total mark is;"+totalmark + 
-        "/naverage mark is;"+avrage.toFixed(2) +
-        "/n the grade is;"+grade 
+        "average mark is;"+avrage +
+        "the grade is;"+grade 
      );
 
 }
